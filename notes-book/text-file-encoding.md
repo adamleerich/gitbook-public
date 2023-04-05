@@ -2,20 +2,20 @@
 
 | Hexadecimal Representation  | Encoding                                                   | Decimal Representation  |
 |-----------------------------|------------------------------------------------------------|-------------------------|
-| EF BB BF                    | UTF-8                                                      | 239 187 191             |
-| FE FF                       | UTF-16, big endian                                         | 254 255                 |
-| FF FE                       | UTF-16, little endian (Notepad++ calls this UCS-2 LE BOM)  | 255 254                 |
-| 00 00 FE FF                 | UTF-32, big-endian                                         | 0 0 254 255             |
-| FF FE 00 00                 | UTF-32, little endian                                      | 255 254 0 0             |
-| 2B 2F 76 38                 | UTF-7                                                      | 43 47 118 56            |
-| 2B 2F 76 39                 | UTF-7                                                      | 43 47 118 57            |
-| 2B 2F 76 2B                 | UTF-7                                                      | 43 47 118 43            |
-| 2B 2F 76 2F                 | UTF-7                                                      | 43 47 118 47            |
-| F7 64 4C                    | UTF-1                                                      | 247 100 76              |
-| DD 73 66 73                 | UTF-EBCDIC                                                 | 221 115 102 115         |
-| 0E FE FF                    | SCSU                                                       | 14 254 255              |
-| FB EE 28                    | BOCU-1                                                     | 251 238 40              |
-| 84 31 95 33                 | GB-18030                                                   | 132 49 149 51           |
+| `EF BB BF    `              | UTF-8                                                      | 239 187 191             |
+| `FE FF       `              | UTF-16, big endian                                         | 254 255                 |
+| `FF FE       `              | UTF-16, little endian (Notepad++ calls this UCS-2 LE BOM)  | 255 254                 |
+| `00 00 FE FF `              | UTF-32, big-endian                                         | 0 0 254 255             |
+| `FF FE 00 00 `              | UTF-32, little endian                                      | 255 254 0 0             |
+| `2B 2F 76 38 `              | UTF-7                                                      | 43 47 118 56            |
+| `2B 2F 76 39 `              | UTF-7                                                      | 43 47 118 57            |
+| `2B 2F 76 2B `              | UTF-7                                                      | 43 47 118 43            |
+| `2B 2F 76 2F `              | UTF-7                                                      | 43 47 118 47            |
+| `F7 64 4C    `              | UTF-1                                                      | 247 100 76              |
+| `DD 73 66 73 `              | UTF-EBCDIC                                                 | 221 115 102 115         |
+| `0E FE FF    `              | SCSU                                                       | 14 254 255              |
+| `FB EE 28    `              | BOCU-1                                                     | 251 238 40              |
+| `84 31 95 33 `              | GB-18030                                                   | 132 49 149 51           |
 
 
 https://msdn.microsoft.com/en-us/library/windows/desktop/dd374101(v=vs.85).aspx
