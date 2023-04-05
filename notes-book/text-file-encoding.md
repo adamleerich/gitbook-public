@@ -1,3 +1,8 @@
+# Test File Encoding
+
+
+
+```
 From Windows DEV Center
 https://msdn.microsoft.com/en-us/library/windows/desktop/dd374101(v=vs.85).aspx
 
@@ -112,4 +117,5 @@ https://www.w3.org/International/questions/qa-byte-order-mark
 
 
 
+```
 
