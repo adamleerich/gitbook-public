@@ -1,41 +1,34 @@
 # Test File Encoding
 
+| Hexadecimal Representation  | Encoding                                                   | Decimal Representation  |
+|-----------------------------|------------------------------------------------------------|-------------------------|
+| EF BB BF                    | UTF-8                                                      | 239 187 191             |
+| FE FF                       | UTF-16, big endian                                         | 254 255                 |
+| FF FE                       | UTF-16, little endian (Notepad++ calls this UCS-2 LE BOM)  | 255 254                 |
+| 00 00 FE FF                 | UTF-32, big-endian                                         | 0 0 254 255             |
+| FF FE 00 00                 | UTF-32, little endian                                      | 255 254 0 0             |
+| 2B 2F 76 38                 | UTF-7                                                      | 43 47 118 56            |
+| 2B 2F 76 39                 | UTF-7                                                      | 43 47 118 57            |
+| 2B 2F 76 2B                 | UTF-7                                                      | 43 47 118 43            |
+| 2B 2F 76 2F                 | UTF-7                                                      | 43 47 118 47            |
+| F7 64 4C                    | UTF-1                                                      | 247 100 76              |
+| DD 73 66 73                 | UTF-EBCDIC                                                 | 221 115 102 115         |
+| 0E FE FF                    | SCSU                                                       | 14 254 255              |
+| FB EE 28                    | BOCU-1                                                     | 251 238 40              |
+| 84 31 95 33                 | GB-18030                                                   | 132 49 149 51           |
+
+
+https://msdn.microsoft.com/en-us/library/windows/desktop/dd374101(v=vs.85).aspx
+https://en.wikipedia.org/wiki/Byte_order_mark
+
+
 
 
 ```
-From Windows DEV Center
-https://msdn.microsoft.com/en-us/library/windows/desktop/dd374101(v=vs.85).aspx
-
-Byte order mark      Description
-EF BB BF             UTF-8
-FF FE                UTF-16, little endian (Notepad++ calls this UCS-2 LE BOM)
-FE FF                UTF-16, big endian
-FF FE 00 00          UTF-32, little endian
-00 00 FE FF          UTF-32, big-endian
-2B 2F 76 38          UTF-7
-2B 2F 76 39          UTF-7             
-2B 2F 76 2B          UTF-7             
-2B 2F 76 2F          UTF-7             
-2B 2F 76 38 2D       UTF-7             
-F7 64 4C             UTF-1        
-DD 73 66 73          UTF-EBCDIC   
-0E FE FF             SCSU         
-FB EE 28             BOCU-1       
-84 31 95 33          GB-18030     
-
-
 Note   Windows default is UTF-16, little endian byte order.
 
 
 
-From SO
-https://stackoverflow.com/questions/3710374/get-encoding-of-a-file-in-windows
-  efbbbf    utf8
-  2b2f76    utf7
-  fffe      unicode
-  feff      bigendianunicode
-  0000feff  utf32
-  
   
 ASCII Code Space is 0-255 broken up like this
 0:       NUL
@@ -69,9 +62,9 @@ Decimal  Hex  Abbr  CC     Esc  Name
 14       0E   SO    ^N          Shift Out
 15       0F   SI    ^O          Shift In
 16       10   DLE   ^P          Data Link Escape
-17       11   DC1   ^Q          Device Control 1 (often XON)
+17       11   DC1   ^Q          Device Control 1 (often XON)
 18       12   DC2   ^R          Device Control 2
-19       13   DC3   ^S          Device Control 3 (often XOFF)
+19       13   DC3   ^S          Device Control 3 (often XOFF)
 20       14   DC4   ^T          Device Control 4
 21       15   NAK   ^U          Negative Acknowledgement
 22       16   SYN   ^V          Synchronous Idle
@@ -101,8 +94,6 @@ Punctuation and Symbols        123-126  {|}~
 Control character              127      1 control code containing the "Delete" character.
 
 
-128-255 printed
- !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
  
  
 https://en.wikipedia.org/wiki/Whitespace_character
@@ -110,10 +101,6 @@ Other printables from Latin-1 Supplement
 133      85                     Next line
 160      A0                     No-break space
 183      B7                     Middle dot
-
-
-https://en.wikipedia.org/wiki/List_of_Unicode_characters
-https://www.w3.org/International/questions/qa-byte-order-mark
 
 
 
